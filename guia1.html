@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shipment Tracking</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+/* HEADER */
+.header{
+    background:#4D148C;
+    padding:20px 0;
+    text-align:center;
+}
+.header img{
+    height:50px;
+}
+
+/* CONTENT */
+.container{
+    max-width:600px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+/* INFO BOX */
+.info{
+    margin-bottom:30px;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* TIMELINE */
+.timeline{
+    position:relative;
+    margin-left:20px;
+    padding-left:20px;
+    border-left:3px solid #ccc;
+}
+
+.point{
+    margin-bottom:30px;
+    position:relative;
+}
+
+.point::before{
+    content:"";
+    position:absolute;
+    left:-32px;
+    top:0;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#ccc;
+}
+
+.completed::before{
+    background:#4D148C;
+}
+
+.current::before{
+    background:#FF6600;
+}
+
+.location{
+    font-weight:bold;
+}
+
+.status{
+    font-size:14px;
+    color:#555;
+}
+
+.pending{
+    color:#aaa;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    font-size:13px;
+    color:#777;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<img src="images/logo.png" alt="Logo">
+</div>
+
+<div class="container">
+
+<h2>Shipment Tracking Details</h2>
+
+<div class="info">
+<strong>Tracking Number:</strong> 49021412<br>
+<strong>Sender:</strong> Yadiel Ipuana<br>
+<strong>Receiver:</strong> Marlin Vanesa Coroba Calderon<br>
+<strong>Service:</strong> International Priority<br>
+<strong>Status:</strong> In Transit<br>
+</div>
+
+<div class="timeline">
+
+<div class="point completed">
+  <div class="location">FedEx Office – Leticia, Amazonas, Colombia</div>
+  <div class="status">Package received</div>
+</div>
+
+<div class="point completed">
+  <div class="location">El Dorado International Airport – Bogotá, Colombia</div>
+  <div class="status">Departed origin country</div>
+</div>
+
+<div class="point completed">
+  <div class="location">John F. Kennedy International Airport (JFK) – New York, NY</div>
+  <div class="status">Arrived at destination country</div>
+</div>
+
+<div class="point current">
+  <div class="location">U.S. Customs – New York, NY</div>
+  <div class="status">Customs clearance</div>
+</div>
+
+<div class="point">
+  <div class="location">FedEx Ground Facility – Newark, NJ</div>
+  <div class="status">In transit to local facility</div>
+</div>
+
+<div class="point">
+  <div class="location">FedEx Local Distribution Center – Hicksville, NY</div>
+  <div class="status">Out for delivery</div>
+</div>
+
+<div class="point">
+  <div class="location pending">77 Stone Blvd – Massapequa, NY 11758</div>
+  <div class="status pending">Delivered</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
