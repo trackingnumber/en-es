@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- 🔥 CLAVE PARA QUE SEA RESPONSIVE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>FedEx Tracking</title>
 
 <style>
@@ -12,30 +16,40 @@ body{
     text-align:center;
 }
 
+/* HEADER */
 .header{
     background:#4D148C;
-    padding:20px 0;
+    padding:15px 0;
 }
 
 .header img{
-    height:50px;
+    height:45px;
+    max-width:90%;
 }
 
+/* CONTENEDOR */
 .container{
-    margin-top:100px;
+    margin-top:80px;
+    padding:20px;
 }
 
+/* INPUT */
 input{
     padding:12px;
-    width:300px;
+    width:100%;
+    max-width:400px;
     border:1px solid #ccc;
     border-radius:5px;
     font-size:16px;
+    box-sizing:border-box;
 }
 
+/* BOTÓN */
 button{
-    padding:12px 25px;
-    margin-left:10px;
+    padding:12px;
+    margin-top:15px;
+    width:100%;
+    max-width:400px;
     background:#FF6600;
     border:none;
     color:white;
@@ -51,6 +65,23 @@ button:hover{
 #error{
     color:red;
     margin-top:15px;
+}
+
+/* 💻 Ajustes para pantallas grandes */
+@media(min-width:768px){
+
+    .container{
+        margin-top:120px;
+    }
+
+    button{
+        margin-left:10px;
+        width:auto;
+    }
+
+    input{
+        width:300px;
+    }
 }
 </style>
 </head>
@@ -74,7 +105,6 @@ function checkTracking(){
 
     var code = document.getElementById("trackingInput").value.trim();
 
-    /* === EDIT TRACKING CODES HERE === */
     var guides = {
         "ABC123": "guia.html",
         "49021412": "guia1.html",
