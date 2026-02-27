@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FedEx Tracking</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+.header{
+    background:#4D148C;
+    padding:20px 0;
+}
+
+.header img{
+    height:50px;
+}
+
+.container{
+    margin-top:100px;
+}
+
+input{
+    padding:12px;
+    width:300px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button{
+    padding:12px 25px;
+    margin-left:10px;
+    background:#FF6600;
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e65c00;
+}
+
+#error{
+    color:red;
+    margin-top:15px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<img src="logo.png" alt="Logo">
+</div>
+
+<div class="container">
+<h2>Enter your tracking number</h2>
+
+<input type="text" id="trackingInput" placeholder="Tracking number">
+<button onclick="checkTracking()">Track</button>
+
+<div id="error"></div>
+</div>
+
+<script>
+function checkTracking(){
+
+    var code = document.getElementById("trackingInput").value.trim();
+
+    /* === EDIT TRACKING CODES HERE === */
+    var guides = {
+        "ABC123": "guia.html",
+        "49021412": "guia1.html",
+        "XYZ789": "guia2.html",
+        "FEDEX001": "guia3.html",
+        "TEST999": "guia4.html"
+    };
+
+    if(guides[code]){
+        window.location.href = guides[code];
+    }else{
+        document.getElementById("error").innerText = "Invalid tracking number";
+    }
+}
+</script>
+
+</body>
+</html>
